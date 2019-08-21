@@ -4,3 +4,5 @@ Feature: Open cucumber sites
     Given Open the Chrom and launch the application
     When open blog center
     Then count the number of blog available
+    And 
+    Then I finsish all things
