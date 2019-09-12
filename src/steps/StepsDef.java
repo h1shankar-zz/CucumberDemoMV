@@ -19,33 +19,18 @@ public class StepsDef extends BaseSetup {
 
 	@Before
 	public void getSetup() throws FileNotFoundException, IOException {
+	System.out.println("base setup method executed");
+		
 		b = new BaseSetup();
 		b.baseSetup1();
 	}
-
-	/*
-	 * @Given("^Open the Chrom and launch the application$") public void
-	 * open_the_Chrom_and_launch_the_application() throws IOException,
-	 * InterruptedException { prop= b.getPropertyData(); String
-	 * u=prop.getProperty("url"); System.out.println("uri  "+u);
-	 * b.driver.get(u);
-	 * 
-	 * Thread.sleep(3000); b.driver.quit(); }
-	 * 
-	 * 
-	 * @When("^open blog center$") public void open_blog_center() throws
-	 * Throwable {
-	 * 
-	 * }
-	 */
 	@Given("^Open the Chrom and launch the application$")
 	public void open_the_Chrom_and_launch_the_application() throws IOException, InterruptedException {
 		prop = b.getPropertyData();
 		String u = prop.getProperty("url");
 		System.out.println("uri  " + u);
 		b.driver.get(u);
-
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 
 	}
 
